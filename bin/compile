@@ -39,18 +39,20 @@ if [[ -f requirements.txt ]]; then
   pip install --use-mirrors -r requirements.txt | indent
 fi
 
-puts-step "Running pelican"
+exit 0
 
-if [[ -f publishconf.py ]]; then
-  CONFIG_FILE="publishconf.py"
-elif [[ -f pelicanconf.py ]]; then
-  CONFIG_FILE="pelicanconf.py"
-else
-  puts-warn "A pelicanconf.py or publishconf.py file is required."
-  exit 1
-fi
-
-cd $BUILD_DIR
+#puts-step "Running pelican"
+#
+#if [[ -f publishconf.py ]]; then
+#  CONFIG_FILE="publishconf.py"
+#elif [[ -f pelicanconf.py ]]; then
+#  CONFIG_FILE="pelicanconf.py"
+#else
+#  puts-warn "A pelicanconf.py or publishconf.py file is required."
+#  exit 1
+#fi
+#
+#cd $BUILD_DIR
 
 #pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE -r $BUILD_DIR/content | indent
 #pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE -r $BUILD_DIR/content -t $BUILD_DIR/theme | indent
