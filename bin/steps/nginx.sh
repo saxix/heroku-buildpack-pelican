@@ -15,6 +15,7 @@ if [[ ! -d "$CACHE_DIR/$NGINX_VERSION" ]]; then
 else
   puts-step "nginx found ($CACHE_DIR/$NGINX_VERSION)"
 fi
+
 cd $CACHE_DIR/$NGINX_VERSION
 make install &> /dev/null
 
