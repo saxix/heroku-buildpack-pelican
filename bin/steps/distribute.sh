@@ -3,5 +3,5 @@ if [[ ! -d "$CACHE_DIR/$DISTRIBUTE_VERSION" ]]; then
   puts-step "Installing Distribute ($DISTRIBUTE_VERSION)"
   curl https://pypi.python.org/packages/source/d/distribute/$DISTRIBUTE_VERSION.tar.gz -s | tar xz &> /dev/null
   cd $DISTRIBUTE_VERSION
-  python setup.py install &> /dev/null
+  python setup.py install
 fi
