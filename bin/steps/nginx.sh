@@ -17,7 +17,7 @@ else
 fi
 
 cd $CACHE_DIR/$NGINX_VERSION
-make install &> /dev/null
+make install
 
 mkdir -p $BUILD_DIR/.profile.d
 cp $ROOT_DIR/conf/path.sh $BUILD_DIR/.profile.d/
