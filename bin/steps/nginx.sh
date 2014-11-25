@@ -26,8 +26,6 @@ if [[ ! -f $BUILD_DIR/nginx.conf.erb ]]; then
   cp $ROOT_DIR/conf/nginx.conf.erb $BUILD_DIR/nginx.conf.erb
 fi
 
-erb $BUILD_DIRß/nginx.conf.erb > /app/nginx.conf
-
 cp $ROOT_DIR/conf/mime.types $BUILD_DIR/
 cp $BIN_DIR/launch-nginx "$BUILD_DIR/local/sbin"
 
