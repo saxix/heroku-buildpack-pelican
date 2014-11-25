@@ -29,8 +29,8 @@ source $BIN_DIR/steps/python.sh
 source $BIN_DIR/steps/distribute.sh
 source $BIN_DIR/steps/pip.sh
 source $BIN_DIR/steps/pelican.sh
-source $BIN_DIR/steps/pcre.sh
-source $BIN_DIR/steps/nginx.sh
+#source $BIN_DIR/steps/pcre.sh
+#source $BIN_DIR/steps/nginx.sh
 
 
 cd $BUILD_DIR
@@ -58,3 +58,4 @@ exit 0
 #pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE -r $BUILD_DIR/content | indent
 #pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE -r $BUILD_DIR/content -t $BUILD_DIR/theme | indent
 
+cp $ROOT_DIR/conf/nginx.conf.erb $BUILD_DIR/nginx.conf.erb
