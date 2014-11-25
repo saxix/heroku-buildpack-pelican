@@ -61,4 +61,3 @@ fi
 
 #cp $ROOT_DIR/conf/nginx.conf.erb $BUILD_DIR/nginx.conf.erb
 
-erb /app/nginx.conf.erb > /app/nginx.conf
