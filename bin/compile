@@ -73,7 +73,7 @@ else
   exit 1
 fi
 
-pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE $BUILD_DIR/content | indent
+#pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE $BUILD_DIR/content | indent
 
 puts-step "Installing pcre ($PCRE_VERSION)"
 if [[ ! -d "$CACHE_DIR/$PCRE_VERSION" ]]; then
