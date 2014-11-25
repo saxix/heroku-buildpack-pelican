@@ -17,7 +17,6 @@ else
 fi
 
 cd $CACHE_DIR/$NGINX_VERSION
-make -j2 &> /dev/null
 make install
 
 mkdir -p $BUILD_DIR/.profile.d
@@ -27,7 +26,7 @@ if [[ ! -f $BUILD_DIR/nginx.conf.erb ]]; then
   cp $ROOT_DIR/conf/nginx.conf.erb $BUILD_DIR/nginx.conf.erb
 fi
 
-erb /app/nginx.conf.erb > /app/nginx.conf
+erb $BUILD_DIRß/nginx.conf.erb > /app/nginx.conf
 
 cp $ROOT_DIR/conf/mime.types $BUILD_DIR/
 cp $BIN_DIR/launch-nginx "$BUILD_DIR/local/sbin"
