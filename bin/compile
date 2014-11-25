@@ -23,9 +23,11 @@ PCRE_VERSION='pcre-8.35'
 source $BIN_DIR/utils
 
 mkdir -p $BUILD_DIR/local/sbin
-export PATH=$CACHE_DIR/$PYTHON_VERSION/bin:$PATH
 
 source $BIN_DIR/steps/python.sh
+
+export PATH=$CACHE_DIR/$PYTHON_VERSION/bin:$PATH
+
 source $BIN_DIR/steps/distribute.sh
 source $BIN_DIR/steps/pip.sh
 source $BIN_DIR/steps/pelican.sh
