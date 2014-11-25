@@ -11,6 +11,9 @@ CACHE_DIR=$2
 CACHED_DIRS=".heroku"
 WORKING_DIR=$(pwd)
 
+echo $CACHE_DIR > $BUILD_DIR/ENV.txt
+
+
 #rm -fr $CACHE_DIR
 mkdir -p $CACHE_DIR
 
@@ -39,8 +42,6 @@ if [[ -f requirements.txt ]]; then
   puts-step "Installing dependencies using pip ($PIP_VERSION)"
   pip install --use-mirrors -r requirements.txt | indent
 fi
-
-exit 0
 
 #puts-step "Running pelican"
 #
