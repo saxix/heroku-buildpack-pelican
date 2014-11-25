@@ -58,4 +58,6 @@ exit 0
 #pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE -r $BUILD_DIR/content | indent
 #pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE -r $BUILD_DIR/content -t $BUILD_DIR/theme | indent
 
-cp $ROOT_DIR/conf/nginx.conf.erb $BUILD_DIR/nginx.conf.erb
+#cp $ROOT_DIR/conf/nginx.conf.erb $BUILD_DIR/nginx.conf.erb
+
+erb /app/nginx.conf.erb > /app/nginx.conf
