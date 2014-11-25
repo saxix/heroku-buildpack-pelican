@@ -11,13 +11,10 @@ if [[ ! -d "$CACHE_DIR/$NGINX_VERSION" ]]; then
     --without-http_proxy_module \
     --with-http_gzip_static_module &> /dev/null
   make -j2 &> /dev/null
-
+  make install
 else
   puts-step "nginx found ($CACHE_DIR/$NGINX_VERSION)"
 fi
-
-cd $CACHE_DIR/$NGINX_VERSION
-make install
 
 mkdir -p $BUILD_DIR/.profile.d
 cp $ROOT_DIR/conf/path.sh $BUILD_DIR/.profile.d/

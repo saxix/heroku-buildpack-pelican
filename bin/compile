@@ -14,7 +14,7 @@ WORKING_DIR=$(pwd)
 echo $CACHE_DIR > $BUILD_DIR/ENV.txt
 
 
-#rm -fr $CACHE_DIR
+rm -fr $CACHE_DIR
 mkdir -p $CACHE_DIR
 
 # Versions.
