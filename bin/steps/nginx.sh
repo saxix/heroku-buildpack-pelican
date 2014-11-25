@@ -3,7 +3,7 @@ if [[ ! -d "$CACHE_DIR/$NGINX_VERSION" ]]; then
   cd $CACHE_DIR
   curl http://nginx.org/download/$NGINX_VERSION.tar.gz -s | tar xz &> /dev/null
   cd $NGINX_VERSION
-  ./configure --prefix=$BUILD_DIR/local \
+  ./configure --prefix=/bin \
     --with-pcre=$CACHE_DIR/$PCRE_VERSION \
     --without-select_module \
     --without-poll_module \
