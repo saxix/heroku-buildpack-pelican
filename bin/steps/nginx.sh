@@ -1,6 +1,6 @@
-puts-step "Installing nginx ($NGINX_VERSION)"
 #if [[ ! -d "$CACHE_DIR/$NGINX_VERSION" ]]; then
-if [[ ! -e "$BIN_DIR/launch-nginx" ]]; then
+if [[ ! -e "$BIN_DIR/ nginx" ]]; then
+  puts-step "Installing nginx ($NGINX_VERSION)"
   cd $CACHE_DIR
   curl http://nginx.org/download/$NGINX_VERSION.tar.gz -s | tar xz &> /dev/null
   cd $NGINX_VERSION
@@ -15,6 +15,8 @@ if [[ ! -e "$BIN_DIR/launch-nginx" ]]; then
 
   cd $CACHE_DIR/$NGINX_VERSION
   make install &> /dev/null
+else
+  puts-step "nginx found ($NGINX_VERSION)"
 fi
 
 mkdir -p $BUILD_DIR/.profile.d
