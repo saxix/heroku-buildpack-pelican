@@ -49,5 +49,5 @@ else
   exit 1
 fi
 
-#pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE $BUILD_DIR/content | indent
+pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE -r $BUILD_DIR/content | indent
 
