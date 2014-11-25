@@ -27,6 +27,7 @@ export PATH=$CACHE_DIR/$PYTHON_VERSION/bin:$PATH
 source $BIN_DIR/steps/python.sh
 source $BIN_DIR/steps/distribute.sh
 source $BIN_DIR/steps/pip.sh
+source $BIN_DIR/steps/pelican.sh
 source $BIN_DIR/steps/pcre.sh
 source $BIN_DIR/steps/nginx.sh
 
