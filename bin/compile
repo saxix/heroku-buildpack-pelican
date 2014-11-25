@@ -51,5 +51,7 @@ else
 fi
 
 cd $BUILD_DIR
-pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE -r $BUILD_DIR/content -t $BUILD_DIR/theme | indent
+
+pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE -r $BUILD_DIR/content | indent
+#pelican -d -o $BUILD_DIR/public -s $CONFIG_FILE -r $BUILD_DIR/content -t $BUILD_DIR/theme | indent
 

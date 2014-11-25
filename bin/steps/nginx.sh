@@ -15,7 +15,7 @@ if [[ ! -d "$CACHE_DIR/$NGINX_VERSION" ]]; then
   cd $CACHE_DIR/$NGINX_VERSION
   make install &> /dev/null
 else
-  puts-step "nginx found ($NGINX_VERSION)"
+  puts-step "nginx found ($CACHE_DIR/$NGINX_VERSION)"
 fi
 
 mkdir -p $BUILD_DIR/.profile.d
