@@ -1,5 +1,4 @@
-#if [[ ! -d "$CACHE_DIR/$NGINX_VERSION" ]]; then
-if [[ ! -e "$BIN_DIR/ nginx" ]]; then
+if [[ ! -d "$CACHE_DIR/$NGINX_VERSION" ]]; then
   puts-step "Installing nginx ($NGINX_VERSION)"
   cd $CACHE_DIR
   curl http://nginx.org/download/$NGINX_VERSION.tar.gz -s | tar xz &> /dev/null
