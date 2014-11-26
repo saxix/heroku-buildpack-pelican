@@ -11,7 +11,7 @@ if [[ ! -d "$CACHE_DIR/$NGINX_VERSION" ]]; then
     --without-http_proxy_module \
     --with-http_gzip_static_module &> /dev/null
   make -j2 &> /dev/null
-  make install
+  make install &> /dev/null
 else
   puts-step "nginx found ($CACHE_DIR/$NGINX_VERSION)"
 fi
